@@ -17,7 +17,7 @@ class CreateItemsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->unsignedInteger('quantity');
-            $table->string('measuring_unit',15);
+            $table->unsignedInteger('measuring_id'); 
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('suppliers_id');
             $table->unsignedInteger('inventories_id');

@@ -1,0 +1,18 @@
+#newuser,#newinv,#assigen1{
+  margin-left: 10%;
+}
+  #newuser .form-group,#newinv .form-group{
+    width: 50%;
+  }
+  #userbtn{
+    margin-left: 39%;
+  }
+  
+  #logout{
+      color: white;
+      background-color: #3c8dbc;
+      font-size: 15px;
+  }
+  #invbtn{
+    margin-left: 35%;
+  }

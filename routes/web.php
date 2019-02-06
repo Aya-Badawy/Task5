@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('ad_dashboard');
+    return view('admins.ad_dashboard');
+});
+
+Route::get('/user', function () {
+    return view('newuser');
 });

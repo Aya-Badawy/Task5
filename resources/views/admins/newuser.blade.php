@@ -1,12 +1,14 @@
-<form>
+<div id="newuser">
+<form  action="" method="post">
+         @csrf
   <div class="form-group">
     <input type="text" name='name'class="form-control" placeholder="Enter Name">
   </div>
-    
+
     <div class="form-group">
     <input type="email" name='email' class="form-control" placeholder="Enter Email">
   </div>
-    
+
     <div class="form-group">
     <input type="text"  name='phone' class="form-control" placeholder="Enter phone">
   </div>
@@ -19,19 +21,16 @@
      <div class="form-group">
     <input type="password" name='rep_password' class="form-control" placeholder="confirm password">
   </div>
-    <div class="form-check">
-        <h4>role:</h4>
-  <input class="form-check-input" type="checkbox" value="0" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Inventory Manger
-  </label>
-        
-        <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Admin
-  </label>
+
+  <h4><strong>role</strong></h4>
+ <p>
+ <input class="w3-radio" type="radio" name="role" value="0" checked>
+ <label>Inventory Manger</label></p>
+ <p>
+ <input class="w3-radio" type="radio" name="role" value="female">
+ <label>Admin</label></p>
+
+
+
+<button  id='userbtn' type="submit" class="w3-button w3-orange">New User</button></form>
 </div>
-    
- 
-  <button type="submit" class="btn btn-primary">add user</button>
-</form>
