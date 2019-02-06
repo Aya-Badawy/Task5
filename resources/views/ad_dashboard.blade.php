@@ -11,7 +11,7 @@
 <div class="wrapper">
 
   <!-- Main Header -->
-  @include('mainHeader')
+    @include('admins.headLinks')
   <!--  dashbored links -->
   @include('dashboardLinks')
 
@@ -20,14 +20,14 @@
   <!--  hole page content -->
 
   <div class="content-wrapper">
-    @include('main_content');
+    @include('main_content')
   </div>
 
   <!-- Main Footer -->
       @include('footer')
 
  <!-- required styles files -->
-      @include('styleLib');
+      @include('styleLib')
 
 </body>
 </html>
