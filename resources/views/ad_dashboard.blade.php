@@ -15,7 +15,7 @@
   <!--  dashbored links -->
   @include('admins.dashboardLinks')
 
-
+  @include('admins.mainHeader')
 
   <!--  hole page content -->
 
