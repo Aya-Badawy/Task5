@@ -1,6 +1,6 @@
 <section class="content   container-fluid">
 
-    @include('rates')
+     <?php  require_once('rates.blade.php') ?>
 
 <h4 id='showManger'><strong>  # Show Mangers</strong></h4>
   <div>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Admin panel</title>
-    @include('headLinks')
+    @include('admins.headLinks')
 </head>
 
 <body class="hold-transition  sidebar-mini">
@@ -13,7 +13,7 @@
   <!-- Main Header -->
     @include('admins.headLinks')
   <!--  dashbored links -->
-  @include('dashboardLinks')
+  @include('admins.dashboardLinks')
 
 
 
@@ -24,10 +24,10 @@
   </div>
 
   <!-- Main Footer -->
-      @include('footer')
+      @include('admins.footer')
 
  <!-- required styles files -->
-      @include('styleLib')
+      @include('admins.styleLib')
 
 </body>
 </html>
