@@ -32,10 +32,6 @@ class User extends Authenticatable
 
    //=================================================
 
-    public function countAdmins(){
-      return $this->all()->where('role_id',10)->count();
-    }
-
 
 
 

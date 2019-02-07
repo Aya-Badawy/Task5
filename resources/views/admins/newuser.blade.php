@@ -1,4 +1,5 @@
 <div id="newuser">
+
 <form  action="new" method="post">
          @csrf
   <div class="form-group">
@@ -15,6 +16,8 @@
     <div class="form-group">
     <input type="address" name='address' class="form-control" placeholder="Enter address" required>
   </div>
+  <strong> note: 1-Password must be at least 8 characters<br> 2- must contain at least one lower case letter<br>
+ 3- and one upper case letter<br> 4- and one digit'</strong>
      <div class="form-group">
     <input type="password" name='password' class="form-control" placeholder="Enter password" required>
   </div>
