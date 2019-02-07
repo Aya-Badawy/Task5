@@ -6,7 +6,6 @@
   <title>Admin panel</title>
     @include('admins.headLinks')
 </head>
-
 <body class="hold-transition  sidebar-mini">
 <div class="wrapper">
 

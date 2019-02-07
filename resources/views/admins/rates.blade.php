@@ -3,7 +3,7 @@
       <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
       <div class="info-box-content">
         <span class="info-box-text">Inventory Mangers</span>
-        <span class="info-box-number">93,139</span>
+        <span class="info-box-number">{{$count['num_magers']}}</span>
       </div><!-- /.info-box-content -->
     </div><!-- /.info-box -->
 
@@ -12,7 +12,7 @@
           <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
           <div class="info-box-content">
             <span class="info-box-text">Admins</span>
-            <span class="info-box-number">93,139</span>
+            <span class="info-box-number">{{$count['num_admins']}}</span>
           </div><!-- /.info-box-content -->
         </div><!-- /.info-box -->
 
@@ -21,8 +21,6 @@
               <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Inventories</span>
-                <span class="info-box-number">93,139</span>
+                <span class="info-box-number">{{$count['num_inven']}}</span>
               </div><!-- /.info-box-content -->
             </div><!-- /.info-box -->
-
-            

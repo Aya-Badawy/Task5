@@ -15,6 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $guarded=[];
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -27,4 +28,23 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+   //=================================================
+
+    public function countAdmins(){
+      return $this->all()->where('role_id',10)->count();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
