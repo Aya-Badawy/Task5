@@ -15,10 +15,10 @@ class CreateTarnsactionsTable extends Migration
     {
         Schema::create('tarnsactions', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('type',1);
+            $table->unsignedInteger('transType_id');
             $table->unsignedInteger('items_id');
             $table->unsignedInteger('quantity');
-            $table->string('measuring_unit',15);
+            $table->unsignedInteger('measuring_id');
             $table->text('description');
             $table->unsignedInteger('user_id');
             $table->timestamps();

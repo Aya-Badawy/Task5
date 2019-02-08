@@ -19,11 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone',25)->unique();
             $table->string('address');
-            $table->string('hashed_password');
-            /*
-             0 => inventory manger. // 1=> admin
-            */
-            $table->char('role',1);
+            $table->string('password');
+            $table->unsignedInteger('role_id');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
