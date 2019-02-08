@@ -26,7 +26,7 @@
 
     </tr>
     @php
-  }
+      }
     @endphp
   </table>
   <br>

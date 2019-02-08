@@ -11,7 +11,7 @@ class user_quiers{
          'email'=>$inputs['email'],
          'phone'=>$inputs['phone'],
          'address'=>$inputs['address'],
-         'hashed_password'=>Hash::make($inputs['password']),
+         'password'=>Hash::make($inputs['password']),
          'role_id'=>$inputs['role_id']
        ];
        DB::table('users')->insert($user);

@@ -1,20 +1,27 @@
 <?php
-Auth::loginUsingId(3);
-Route::get('/ad_dashboard','dashboardController@info');
-
+//Auth::loginUsingId(2);
+Route::get('/ad_dashboard','dashboardController@info')->middleware('auth');
+Route::get('/user_dashboard','mangerDashboardController@index')->middleware('auth');
 Route::get('/welcome',function(){
        return view('messages');
 });
 
-Route::post('/new','newuserController@valid');
-Route::post('/inven','inventoryController@valid');
-Route::post('/assigen','assigenMangerController@assigen');
-Route::get('/view/{user}','userCrudController@view');
-Route::get('/edit/{user}','userCrudController@edit');
-Route::post('/update/{user}','userCrudController@update');
-Route::get('/delete/{user}','userCrudController@delete');
+Route::post('/new','newuserController@valid')->middleware('auth');
+Route::post('/inven','inventoryController@valid')->middleware('auth');
+Route::post('/assigen','assigenMangerController@assigen')->middleware('auth');
+Route::get('/view/{user}','userCrudController@view')->middleware('auth');
+Route::get('/edit/{user}','userCrudController@edit')->middleware('auth');
+Route::post('/update/{user}','userCrudController@update')->middleware('auth');
+Route::get('/delete/{user}','userCrudController@delete')->middleware('auth');
 
-Route::get('/view_in/{inv}','invCrudController@view');
-Route::get('/edit_in/{inv}','invCrudController@edit');
-Route::post('/update_in/{inv}','invCrudController@update');
-Route::get('/delete_in/{inv}','invCrudController@delete');
+Route::get('/view_in/{inv}','invCrudController@view')->middleware('auth');
+Route::get('/edit_in/{inv}','invCrudController@edit')->middleware('auth');
+Route::post('/update_in/{inv}','invCrudController@update')->middleware('auth');
+Route::get('/delete_in/{inv}','invCrudController@delete')->middleware('auth');
+Route::post('/login','loginController@authenticate');
+Route::get('/login','loginController@login');
+Route::get('/home','loginController@login');
+Route::get('/logout', function(){
+   Auth::logout();
+   return Redirect::to('login');
+});

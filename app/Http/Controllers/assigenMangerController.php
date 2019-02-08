@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+
 use \App\assigenQuery;
 
 class assigenMangerController extends Controller{

@@ -19,7 +19,7 @@
       <ul class="nav navbar-nav">
 
           <li>
-              <a id='logout' href="#" ><strong>Log out</strong></a>
+              <a id='logout' href="logout" ><strong>Log out</strong></a>
           </li>
 
       </ul>
