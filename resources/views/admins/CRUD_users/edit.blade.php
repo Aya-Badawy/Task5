@@ -32,7 +32,7 @@
   <p>
   <input class="w3-radio" type="radio" name="role" value="10">
   <label>Admin</label></p>
-  <button  id='userbtn' type="submit" class="w3-button w3-blue">Edit User</button></form>
+  <button   type="submit" class="w3-button w3-blue">Edit User</button></form>
 
 </form>
 

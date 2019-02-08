@@ -13,3 +13,8 @@ Route::get('/view/{user}','userCrudController@view');
 Route::get('/edit/{user}','userCrudController@edit');
 Route::post('/update/{user}','userCrudController@update');
 Route::get('/delete/{user}','userCrudController@delete');
+
+Route::get('/view_in/{inv}','invCrudController@view');
+Route::get('/edit_in/{inv}','invCrudController@edit');
+Route::post('/update_in/{inv}','invCrudController@update');
+Route::get('/delete_in/{inv}','invCrudController@delete');

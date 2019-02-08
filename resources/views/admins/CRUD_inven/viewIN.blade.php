@@ -6,7 +6,7 @@
 <body>
 ​
 <div class="w3-container">
-  <h2> Show User : {{$user->name}} Inforamtion </h2>
+  <h2> Show Inventory : Inforamtion </h2>
 ​
   <table class="w3-table-all">
     <thead>
@@ -18,28 +18,33 @@
     </thead>
     <tr class="w3-hover-green">
       <th>id</th>
-      <td>{{$user->id}}</td>
+      <td>{{$inv->id}}</td>
 
     </tr>
     <tr class="w3-hover-blue">
-      <th>Name</th>
-      <td>{{$user->name}}</td>
+      <th>serial number/code</th>
+      <td>{{$inv->serial_code}}</td>
     <tr class="w3-hover-black">
-      <th>Email</th>
-      <td>{{$user->email}}</td>
+      <th>storage/unites</th>
+      <td>{{$inv->storage}}</td>
     </tr>
     <tr class="w3-hover-orange">
-      <th>Phone</th>
-      <td>{{$user->phone}}</td>
+      <th>country</th>
+      <td>{{$inv->country}}</td>
     </tr>
 
     <tr class="w3-hover-pink">
-      <th>Address</th>
-      <td>{{$user->address}}</td>
+      <th>city</th>
+      <td>{{$inv->city}}</td>
 
       <tr class="w3-hover-yellow">
-        <th>Role</th>
-        <td>{{ $user->role_id == "10" ? "admin" :"manger"}}</td>
+        <th>street</th>
+        <td>{{$inv->street}}</td>
+      </tr>
+
+      <tr class="w3-hover-yellow">
+        <th> inventory Manger Id</th>
+        <td>{{$inv->user_id}}</td>
       </tr>
 
 

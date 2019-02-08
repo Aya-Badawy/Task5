@@ -26,4 +26,16 @@ class inven_quires{
          }
          return false;
 }
+
+public static function deleteinv($inv){
+  DB::table('inventories')->where('id',$inv->id)->delete();
+ }
+
+
+    public static function updateinv($inv,$id){
+      //dd($id);
+      DB::table('inventories')
+           ->where('id',$id)
+           ->update($inv);
+    }
 }
