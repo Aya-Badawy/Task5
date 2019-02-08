@@ -8,7 +8,9 @@ class counters{
      public static function counters(){
       $counters=['num_admins'=>self::countAdmins(),
                  'num_magers'=>self::countInventoryManger(),
-                 'num_inven'=>self::countInventories()];
+                 'num_inven'=>self::countInventories(),
+                  'users'=>self::getUsers(),
+                  'inven'=>self::getinven()];
         return  $counters;
      }
 
@@ -29,5 +31,19 @@ class counters{
     private  static function countInventories(){
       return DB::table('inventories')->count();
     }
+
+    private  static function getUsers($start=1,$end=5){
+      $results = DB::table('users')
+           ->whereBetween('id', [$start,$end])
+           ->get();
+           return $results;
+        }
+
+        private  static function getinven($start=1,$end=5){
+          $results = DB::table('inventories')
+               ->whereBetween('id', [$start,$end])
+               ->get();
+               return $results;
+            }
 
 }

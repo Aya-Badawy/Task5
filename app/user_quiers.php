@@ -3,6 +3,7 @@ namespace App;
 use Illuminate\Http\Reques;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+
 class user_quiers{
      public static function insert($inputs){
        $user=[
@@ -27,4 +28,17 @@ class user_quiers{
           }
           return false;
  }
+
+
+ public static function deleteUser($user){
+   DB::table('users')->where('id',$user->id)->delete();
+  }
+
+
+     public static function updateUser($user,$id){
+       //dd($id);
+       DB::table('users')
+            ->where('id',$id)
+            ->update($user);
      }
+   }

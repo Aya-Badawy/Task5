@@ -10,18 +10,23 @@
       </tr>
     </thead>
 
-     @for($i=0;$i<5;$i++)
+  <?php
 
+  $users=$count['users'];
+    for($i=0; $i <count($users) ; $i++){
+  ?>
     <tr>
-      <td id="{{'id' . $i}}">1</td>
-      <td id="{{'name'.$i}}">mohamed ahmed</td>
-      <td id="{{'role' . $i}}">admin</td>
-      <td id="{{'view' . $i}}"><a href="#" target="_blank"><button class="w3-button w3-blue w3-tiny">View</button></a></td>
-      <td id="{{'edit' . $i}}"><a href="#" target="_blank"><button class="w3-button  w3-orange w3-tiny">Edit</button></a></td>
-      <td id="{{'delete' . $i}}"><a href="#" target="_blank"><button class="w3-button  w3-red w3-tiny">Delete</button></a></td>
+      <td id="{{'id' . $i}}">{{$users[$i]->id}}</td>
+      <td id="{{'name'.$i}}">{{$users[$i]->name}}</td>
+      <td id="{{'role' . $i}}">{{ $users[$i]->role_id == "10" ? "admin" :"manger"}}</td>
+      <td id="{{'view' . $i}}"><a href="view/{{$users[$i]->id}}" target="_blank"><button class="w3-button w3-blue w3-tiny">View</button></a></td>
+      <td id="{{'edit' . $i}}"><a href="edit/{{$users[$i]->id}}" target="_blank"><button class="w3-button  w3-orange w3-tiny">Edit</button></a></td>
+      <td id="{{'delete' . $i}}"><a href="delete/{{$users[$i]->id}}" target="_blank"><button class="w3-button  w3-red w3-tiny">Delete</button></a></td>
 
     </tr>
-  @endfor
+     @php
+   }
+     @endphp
   </table>
   <br>
  <div class="page">

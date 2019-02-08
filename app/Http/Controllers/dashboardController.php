@@ -9,7 +9,8 @@ class dashboardController extends Controller
 
    public function info(){
      $counters=counters::counters();
-     //dd($counters);
+    // dd($x[0]->name);
+          //dd($counters);
      return view('ad_dashboard',['count'=>$counters]);
 
    }
