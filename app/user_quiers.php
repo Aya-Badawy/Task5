@@ -15,6 +15,16 @@ class user_quiers{
        ];
        DB::table('users')->insert($user);
      }
-
-
-}
+     public static function getMangerById($id){
+       $manger = DB::table('users')
+                       ->select(DB::raw('count(*) as count'))
+                       ->where([
+                         ['id','=',$id],
+                         ['role_id','=','20']
+                       ])->get();
+          if($manger[0]->count != 0){
+            return true;
+          }
+          return false;
+ }
+     }

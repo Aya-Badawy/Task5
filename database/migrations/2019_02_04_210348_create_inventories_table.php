@@ -15,7 +15,7 @@ class CreateInventoriesTable extends Migration
     {
         Schema::create('inventories', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedTinyInteger('serial_code');
+            $table->integer('serial_code');
             $table->string('storage');
             $table->string('country');
             $table->string('city');

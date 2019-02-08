@@ -1,12 +1,12 @@
 <div id="assigen1">
-<form  action="" method="post">
+<form  action="assigen" method="post">
          @csrf
   <div class="form-group">
-    <input type="text" name='serial_code'class="form-control" placeholder="Enter Inventory serial number / code">
+    <input type="text" name='code'class="form-control" placeholder="Enter Inventory serial number / code" required>
   </div>
 
     <div class="form-group">
-    <input type="text" name='email' class="form-control" placeholder="Enter Manger Id">
+    <input type="text" name='id' class="form-control" placeholder="Enter Manger Id" required>
   </div>
 
 
