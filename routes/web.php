@@ -21,6 +21,7 @@ Route::get('/delete_in/{inv}','invCrudController@delete')->middleware('auth');
 Route::post('/login','loginController@authenticate');
 Route::get('/login','loginController@login');
 Route::get('/home','loginController@login');
+Route::get('/','loginController@login');
 Route::get('/logout', function(){
    Auth::logout();
    return Redirect::to('login');
